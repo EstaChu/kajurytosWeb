@@ -1,0 +1,10 @@
+{
+    "name": "www.yersiniapestis.net",
+    "description": "yersiniapestis main page",
+    "version": "0.0.1",
+    "private": "true",
+    "dependencies": {
+        "express": "3.2.6",
+        "jade": "*"
+    }   
+}

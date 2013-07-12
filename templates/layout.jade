@@ -1,0 +1,72 @@
+!!!5
+html(lang='es')
+  head
+    title PFHS&beta;
+    meta(name='viweport', content='width=device-width, initial-scale=1.0')
+    meta(name='author', content='J. González Krause')
+    meta(name='description', content='Comunidad minecraft')
+    link(rel='stylesheet', href='css/bootstrap.css')
+    link(rel='stylesheet', href='css/main.css')
+    link(rel='shortcut icon', href='img/mc_logo.png')
+    script(src='http://code.jquery.com/jquery.js')
+
+  body
+    .wrapper
+      // MastHead
+      .masthead
+        h3.muted PFHS
+          small &beta;
+        .navbar
+          .navbar-inner
+            .container
+              ul.nav
+                li
+                  a(href='/') Spawn
+                li
+                  a(href='/servidor') Servidor
+                li
+                  a(href='/normas') Normas
+                li
+                  a(href='http://maps.kajuryto.com') Mapas
+                li
+                  a(href='#').off Ranking
+                li
+                  a(href='#').off Comunidad
+                li
+                  a(href='#').off Tutoriales
+                li
+                  a(href='#').off Historias
+                li
+                  a(href='#').off Noticias
+                li
+                  a(href='#').off About
+            // Active page selection script      
+            script
+              var url = window.location;
+              $('ul.nav a').filter(function() {
+                return this.href == url;
+              }).parent().addClass('active');
+
+      // Hero unit
+      .jumbotron
+        h1
+          block jumbotron
+        p.lead
+          // random header
+          | Jamás has estado tan cerca de la muerte
+
+      .horline
+
+      // main container
+      .container
+        block main-content
+
+      // Pusher
+      .push
+
+      // Footer
+      footer.text-center
+        p Kajuryto&copy; | 2013
+
+    // The ugly crafted JavaScript
+    script(src='js/bootstrap.js')

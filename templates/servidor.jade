@@ -1,0 +1,85 @@
+extends layout
+
+block jumbotron
+    | ¿Como jugar?
+    small
+      | &emsp; Datos de conexión
+  
+block main-content
+  .row-fluid
+    .span12
+      h4
+        | SERVIDOR
+      .spacer-small
+      .span8.center
+        p
+          | Para poder entrar en la comunidad necesitarás ser invitado por uno de los actuales jugadores,
+          | una vez hayas recibido la confirmación y haberte leído las normas, ya serás parte de la mejor
+          | comunidad minecrafter de la Red!
+        p
+          | Así de sencillo.
+      .spacer-small
+
+      .row-fluid
+        .span6.standalone
+          h5.text-center
+            | Datos de conexión
+          table.table.table-bordered
+            thead
+              tr
+                td
+                  | Nombre
+                td
+                  | IP
+                td
+                  | Puerto
+                td
+                  | Versión
+                td
+                  | Estado
+            tbody
+              tr.success
+                td
+                  | PFHS
+                td
+                  | 176.31.110.195
+                td
+                  | 25565
+                td
+                  | 1.6.2
+                td
+                  | Online
+        .span6.standalone
+          h5.text-center
+            | Servicios
+          table.table.table-bordered
+            thead
+              tr
+                td
+                  | Servicio
+                td
+                  | URL/IP
+                td
+                  | Estado
+            tbody
+              tr.success
+                td
+                  | Servidor
+                td
+                  | 176.31.110.195
+                td
+                  | Online
+              tr.success
+                td
+                  | Mapa
+                td
+                  | maps.kajuryto.com
+                td
+                  | Online
+              tr.warning
+                td
+                  | Foro
+                td
+                  | kajuryto.com
+                td
+                  | En proyecto
