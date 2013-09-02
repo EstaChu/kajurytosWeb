@@ -1,30 +1,41 @@
-//##### App main setting
-var express = require('express');
-var app = express();
+/*################################################
+ * kajuryto.com Minecraft Comunity
+ *################################
+ *
+ *@Version: v0.0.1
+ *@Author: Jose Florian Gonzalez Krause <jflokg@gmail.com>
+ *@Date: 12/07/13
+ *@License: Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *
+ * - TODO: Tutorials section.
+ * - TODO: Server ranking.
+ * - TODO: News.
+ * - TODO: Hystories.
+ * - TODO: Blog / community
+ ################################################*/
 
-app.set('views',__dirname + '/templates');
+var express = require('express')
+  , router = require('./controllers')
+  , app = express();
+
+
+/*
+ * App configuration
+ */
+app.set('views',__dirname + '/views');
 app.set('view engine', 'jade');
 
-// app.use(express.logger('dev'));
+app.use(express.logger('dev'));
 app.use(express.static(__dirname + '/static'));
 
-//##### App main route dispatcher logic
-app.get('/', function(req, res){
-    res.render('spawn');
-});
+/*
+ * Route dispatcher
+ */
+router(app);
 
-app.get('/servidor', function(req, res){
-    res.render('servidor');
-});
-
-app.get('/normas', function(req, res){
-    res.render('normas');
-});
-
-//##### 404 Responser
-app.use(function(req, res, next){
-    res.send(404, '404');//res.render('404'));
-});
-
-//##### Socket listener
+/*
+ * Socket listener
+ */ 
 app.listen(8000);
+console.log('Server started at localhost on port 8000');
