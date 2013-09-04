@@ -17,6 +17,10 @@ module.exports = exports = function(app){
 
   app.get('/normas', contentHandler.normas);
 
+  app.get('/tutoriales', contentHandler.tutoriales);
+
+  app.get('/tutoriales/:tutorial', contentHandler.displayTutoriales);
+
   // Not Found handler
   app.use(contentHandler.notFound);
 
