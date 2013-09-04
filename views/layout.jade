@@ -5,9 +5,9 @@ html(lang='es')
     meta(name='viweport', content='width=device-width, initial-scale=1.0')
     meta(name='author', content='J. González Krause')
     meta(name='description', content='Comunidad minecraft')
-    link(rel='stylesheet', href='css/bootstrap.css')
-    link(rel='stylesheet', href='css/main.css')
-    link(rel='shortcut icon', href='img/mc_logo.png')
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/main.css')
+    link(rel='shortcut icon', href='/img/mc_logo.png')
     script(src='http://code.jquery.com/jquery.js')
 
   body
@@ -28,18 +28,18 @@ html(lang='es')
                   a(href='/normas') Normas
                 li
                   a(href='http://maps.kajuryto.com') Mapas
+                li.off
+                  a(href='#') Ranking
+                li.off
+                  a(href='#') Comunidad
                 li
-                  a(href='#').off Ranking
-                li
-                  a(href='#').off Comunidad
-                li
-                  a(href='#').off Tutoriales
-                li
-                  a(href='#').off Historias
-                li
-                  a(href='#').off Noticias
-                li
-                  a(href='#').off About
+                  a(href='/tutoriales') Tutoriales
+                li.off
+                  a(href='#') Historias
+                li.off
+                  a(href='#') Noticias
+                li.off
+                  a(href='#') About
             // Active page selection script      
             script.
               var url = window.location;
@@ -51,10 +51,9 @@ html(lang='es')
       .jumbotron
         h1
           block jumbotron
-        p.lead
+        p.lead#randomHeader
           // random header
-          | Jamás has estado tan cerca de la muerte
-
+          
       .horline
 
       // main container
@@ -69,4 +68,5 @@ html(lang='es')
         p Kajuryto&copy; | 2013
 
     // The ugly crafted JavaScript
-    script(src='js/bootstrap.js')
+    script(src='/js/bootstrap.js')
+    script(src='/js/main.js')

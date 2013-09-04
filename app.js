@@ -11,13 +11,13 @@
  * - TODO: Tutorials section.
  * - TODO: Server ranking.
  * - TODO: News.
- * - TODO: Hystories.
  * - TODO: Blog / community
  ################################################*/
 
 var express = require('express')
   , router = require('./controllers')
-  , app = express();
+  , app = express()
+  , PORT = 8080;
 
 
 /*
@@ -37,5 +37,5 @@ router(app);
 /*
  * Socket listener
  */ 
-app.listen(8000);
-console.log('Server started at localhost on port 8000');
+app.listen(PORT);
+console.log('Server started at localhost on port ' + PORT);
