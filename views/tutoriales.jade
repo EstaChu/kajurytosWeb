@@ -1,0 +1,36 @@
+extends layout
+
+block jumbotron
+    | ¿Complicado?
+    small
+      | &emsp; Aprende como se hace
+  
+block main-content
+  .row-fluid
+    .span12
+      h4
+        | TUTORIALES
+      .spacer-small
+      .span8.center
+        p
+          | Aqui encontraras una lista de tutoriales hechos por la comunidad. Esperamos 
+          | que participes aportando tus propios tutoriales. ¡los mejores tienen premios
+          | dentro del juego!
+
+      .spacer-small
+
+      .row-fluid
+        .span6.offset2
+          h5
+            | Primeros pasos:
+          li.offset3
+            a(href='/tutoriales/primerosPasos')
+              | Como jugar en el servidor.
+          li.offset3
+            a().muted
+              | Primeros dias en el juego.
+          h5
+            | Tutoriales varios:
+          li.offset3
+            a(href='/tutoriales/granjaSpawner')
+              | Granja con spawner.
